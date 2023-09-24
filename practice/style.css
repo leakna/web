@@ -1,0 +1,77 @@
+    .mainline{
+      width: 300;
+      font-size: 20;
+      font-weight: bold;
+      font-family:Arial;
+      text-align: center;
+      line-height: 25px;
+      margin-bottom: 40px;
+    }
+    .secondline{
+      font-size: 12;
+      font-weight:bold;
+      
+    }
+    .thirdline{
+      font-size: 10;
+      color: rgb(0, 123, 255);
+      cursor: pointer;
+      text-decoration: underline;
+    }
+    p{
+      font-family: Verdana;
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+    .header{
+      font-weight: bold;
+      
+        
+    }
+    .beginner{
+      font-size: 12px;
+      font-weight: bold;
+      color: grey;
+      margin-bottom: 15px;
+    }
+    .body{
+      width: 250px;
+      font-size: 12px;
+      font-weight:600;
+    }
+    .g-button{
+      margin-top:15px;
+      border: none;
+      background-color: rgb(17, 134, 17);
+      color: white;
+      border-radius: 5px;
+      padding-left: 15px;
+      padding-right: 15px;
+      height: 25px;
+      cursor: pointer;
+      font-style:normal;
+    
+    }
+    .g-button:hover{
+      opacity: 0.6;
+    }
+    .image{
+      width: 300px;
+      margin-top: 20px;
+    }
+   div{
+    width: 300px;
+    align-content: center;
+    position: relative;
+   }
+   .description{
+    text-align: center;
+    margin-top: 10px;
+    
+
+    
+   }
+   body{
+    align-items: center;
+   }
+  

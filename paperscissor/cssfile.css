@@ -1,0 +1,18 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+.title{
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+}
+.game-icon{
+  background-color: white;
+}
+.butt{
+  background-color: white;
+  padding: 20px;
+  border-radius: 50px;
+  margin-right: 10px;
+  
+}

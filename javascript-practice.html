@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cutegirl</title>
+  <link rel="icon" href="chick.png">
+  <style>
+
+    .flex{
+      background-color: aqua;
+      height: 50px;
+      display: grid;
+      width: 500px;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      
+    }
+    .button:active{
+      background-color: red;
+      
+    }
+    .button{
+      height: 50px;
+    }
+    body{
+      margin: 0px;
+    }
+    
+  </style>
+</head>
+<body>
+    <div class="flex">
+      <button class="button" onclick="
+      console.log(variable)
+      ">
+      show cart
+    </button>
+      <button class="button" onclick="
+        variable++;
+      ">
+      +1
+    </button>
+    <button class="button" onclick="
+      variable+=2;
+    ">
+      +2
+    </button>
+    <button class="button" onclick="
+    variable=0;
+  ">
+    Clear
+  </button>
+    </div>
+  
+  <script>
+    const item1={
+      name:'basketball',
+      price: 2095
+  
+    };
+    const item2={
+      name:'basketball',
+      price: 2095
+  
+    };
+    const letter='Good Morning'
+    item1['delivery-time']='3 days'
+    const expensive=comparePrice(item1,item2)
+    const check=isSameProduct(item1,item2)
+    console.log(check)
+    console.log(letter.repeat(2))
+
+    function comparePrice(product1,product2){
+      return product1.price<product2.price?product2:product1
+    }
+    
+    function isSameProduct(product1,product2){
+      return product1.name===product2.name&&product1.price===product2.price?true:false
+    }
+
+
+  </script>
+</body>
+</html>

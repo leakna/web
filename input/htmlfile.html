@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="cssfile.css">
+</head>
+<body>
+  <p>Todo List</p>
+  <div class="input-div">
+    <input type="text" class="textbox" placeholder="Input your words here">
+  <input type="date" class="datebox">
+  <button class="button" onclick="
+    saveToArray()
+  ">
+    Add
+  </button>
+  </div>
+  <div class="container">
+  
+  </div>
+  <script>
+    let array=[]
+    function saveToArray(){
+      array.push({
+        action:document.querySelector('.textbox').value,
+        date:document.querySelector('.datebox').value
+      }
+      )
+
+      renderList();
+      document.querySelector('.textbox').value=''
+      
+    }
+    function renderList(){
+      console.log('hi')
+      let output=''
+      if(array.length===0)
+        document.querySelector('.container').innerHTML=''
+      else{
+        array.forEach(function(value,index){
+        output+=`<div>${value.action}</div><div>${value.date}</div><button class="remove-button" onclick="
+        array.splice(${index},1)
+      
+        renderList();
+        ">Remove</button>`
+      console.log(output)
+        document.querySelector('.container').innerHTML=output
+      
+        
+      })
+      }
+      
+      console.log(output)
+    }
+    function deleteItem(n){
+      array.splice(n,1)
+      console.log(n)
+    }
+    let one=[{name:'hi',price:123},
+    {name:'hi0',price:13}
+  ]
+
+
+
+  </script>
+  
+</body>
+</html>

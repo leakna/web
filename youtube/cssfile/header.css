@@ -1,0 +1,146 @@
+.header{
+  position: fixed;
+  display: flex;
+  height: 80px;
+  justify-content: space-between;
+  margin-left: 0px;
+  background-color: white;
+  right: 0px;
+  left: 0px;
+  top:0px ;
+  z-index: 100;
+  border-bottom-width: 1px;
+  border-bottom-color: rgb(240, 240, 240);
+  border-bottom-style: solid;
+
+}
+.first-side{
+
+  display: flex;
+
+}
+.second-side{
+  flex: 1;
+  max-width: 500px;
+  margin-left: 70px;
+  margin-right: 70px;
+  display: flex;
+  align-items: center;
+}
+.third-side{
+  flex-shrink: 0;
+  width: 200px;
+  display: flex;
+  margin-right: 20px;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.hamburger-icon{
+  width: 25px;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+.youtube-icon{
+  width: 90px;
+}
+.search{
+  height: 47px;
+  width: 0px;
+  flex: 1;
+  border-style: solid;
+  border-top-left-radius:3px ;
+  border-bottom-left-radius:3px ;
+  border-width: 1px;
+  border-color: rgb(187, 177, 177);
+}
+.voice-icon{
+  width: 30px;
+}
+.search-icon{
+  width: 30px;
+
+}
+.search-button{
+  width: 47px;
+  height: 51px;
+  margin-left: -2px;
+  border-width: 1px;
+   border-style: solid;
+   border-color: rgb(187, 177, 177); 
+   border-radius: 3px;
+   background-color: hsl(0, 27%, 98%);
+}
+.voice-button{
+  border: none;
+  margin-left: 10px;
+  border-radius: 50px;
+  height: 51px;
+  background-color: hsl(0, 27%, 98%);;
+
+  
+}
+
+.image-icon{
+  width: 40px;
+  height: 40px;
+}
+.search::placeholder{
+  padding-left: 10px;
+  font-size: 15px;
+}
+.menubar {
+  background-color: #f2f2f2;
+}
+
+.menubar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menubar li {
+  display: inline-block;
+}
+
+.menubar li a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #333;
+}
+
+.menubar li a:hover {
+  background-color: #ddd;
+}
+.search-button,.voice-button,.create-div,.menu-div,.noti-div{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  
+}
+.search-button .tooltip,.voice-button .tooltip,
+.create-div .tooltip,.menu-div .tooltip,.noti-div .tooltip
+{
+  position: absolute;
+  white-space:nowrap;
+  bottom: -40px;
+  border:none;
+  background-color: rgb(154, 152, 152);
+  color: white;
+  padding: 8px;
+  opacity: 0;
+  pointer-events: none;
+
+}
+.search-button:hover .tooltip,
+.voice-button:hover .tooltip,
+.create-div:hover .tooltip,
+.menu-div:hover .tooltip,
+.noti-div:hover .tooltip
+{
+  opacity: 1;
+  
+}

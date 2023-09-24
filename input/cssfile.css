@@ -1,0 +1,32 @@
+.textbox,
+.datebox
+{
+  height: 30px;
+  width: 200px;
+}
+button{
+  height: 30px;
+  width: 100px;
+  color: white;
+}
+.button{
+ background-color: rgb(36, 134, 36);
+ border: none;
+}
+.container,
+.input-div{
+  display: grid;
+  grid-template-columns: 200px 200px 100px;
+  align-items: center;
+  row-gap: 10px;
+  column-gap: 30px;
+  
+}
+.input-div{
+  margin-bottom: 10px;
+}
+.remove-button{
+  background-color: rgb(166, 33, 33);
+  border: none;
+  
+}

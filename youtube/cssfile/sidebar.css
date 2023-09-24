@@ -1,0 +1,26 @@
+.sidebar{
+  position: fixed;
+  top: 80px;
+  left: 0px;
+  bottom: 0px;
+  background-color: white;
+  width: 90px;
+  font-size: 10px;
+  z-index: 200;
+}
+.sidebar img{
+  width: 30px;
+  
+}
+.sidebar-app{
+ 
+  display: flex;
+  height: 70px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 200;
+}
+.sidebar-app:hover{
+  background-color: brown;
+}

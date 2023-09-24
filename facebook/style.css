@@ -1,0 +1,31 @@
+.main{
+  width: 600px;
+  height: 200px;
+  display: inline-block;
+}
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 20px;
+}
+.profile{
+  width: 100%;
+}
+p{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.friend-layer{
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  column-gap: 5px;
+  align-items:center ;
+
+}
+.friend-profile{
+  width: 100%;
+  border-radius: 50px;
+}
+.mutual-text{
+  font-size: 10px;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Math</title>
+</head>
+<body>
+  <p>Amazon shipping center</p>
+  <input class="textbox"
+  onkeydown="
+    onkey(event)
+  "
+  type="text" placeholder="Input your pay">
+  <div class="div1">
+    <button class="cal-button" onclick="
+    calculate()
+    console.log(document.querySelector('.cal-button'))
+  "
+  >
+    Calculate
+  </button>
+  </div>
+  <p class="total"></p>
+  <script>
+    function onkey(value){
+      if(value.key==='Enter')
+      calculate()
+    }
+    function calculate(){
+     let num=Number(document.querySelector('.textbox').value)
+     num=num<50?num+5:num
+     document.querySelector('.total').innerHTML=`Total is:$${num} `
+    }
+
+  </script>
+
+</body>
+</html>

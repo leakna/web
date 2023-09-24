@@ -1,0 +1,51 @@
+
+
+
+.image{
+  width: 100%;
+
+}
+
+
+p{
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: 'Roboto';
+}
+.vid-author,.vid-description{
+  font-size: 12px;
+  color: grey;
+}
+.vid-title{
+  font-weight: bold;
+
+}
+.vid-author{
+  margin-top: 5px;
+  margin-bottom: 3px;
+
+}
+.profile-pic{
+  width: 30px;
+
+  border-radius: 50px;
+}
+.layer2{
+  display: grid;
+  grid-template-columns: 50px 250px;
+}
+.css-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 15px;
+}
+@media(max-width:7  00px){
+  .css-grid{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+body{
+  padding-right: 30px;
+  padding-left: 70px;
+}

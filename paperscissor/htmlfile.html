@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="cssfile.css">
+  <title>Document</title>
+</head>
+<body>
+  <p class="title">
+    Rock Paper Scissor
+  </p>
+  <button class="butt" onclick="
+    computerPickFunc()
+    demo('rock')
+  ">
+    <img class="game-icon" src="rock.png" alt="rock img">
+  </button>
+  <button class="butt" onclick="
+    computerPickFunc()
+    demo('scissors')
+  ">
+    <img class="game-icon" src="scissors.png" alt="rock img">
+  </button>
+  <button class="butt" onclick="
+    computerPickFunc()
+    demo('paper')
+  ">
+    <img class="game-icon" src="paper.png" alt="rock img">
+  </button>
+  <p class="resultClass"></p>
+  <p class="pickShow"></p>
+  <p class="countClass"></p>
+  <button class="restart" onclick="
+    clearScore()
+  ">
+    Restart Score
+  </button>
+  <script>
+    let computerPick=''
+    let result=''
+    const resultCountObj=JSON.parse(localStorage.getItem('item'))||{
+      win:0,
+      lose:0,
+      tie:0
+    }
+    function computerPickFunc(){
+      if(Math.random()<0.30)
+        computerPick='rock';
+      else if(Math.random()<0.60)
+        computerPick='scissors'
+      else
+        computerPick='paper'
+    }
+    function demo(yourPick){
+      if(yourPick==='rock'){
+        if(computerPick===yourPick)
+          result='Tie'
+        else if(computerPick==='scissors')
+          result='You win'
+        else
+          result='You lose'
+
+      }
+      else if(yourPick==='scissors'){
+        if(computerPick===yourPick)
+          result='Tie'
+        else if(computerPick==='paper')
+          result='You win'
+        else
+          result='You lose'
+      }
+      else{
+        if(computerPick===yourPick)
+          result='Tie'
+        else if(computerPick==='rock')
+          result='You win'
+        else
+          result='You lose'
+      }
+      if(result==='You win')
+        resultCountObj.win+=1
+      else if(result==='You lose')
+        resultCountObj.lose+=1
+      else
+        resultCountObj.tie+=1
+      console.log(resultCountObj.tie)
+      document.querySelector('.countClass').innerHTML=`win=${resultCountObj.win}, lose=${resultCountObj.lose}, tie=${resultCountObj.tie
+      }`
+      localStorage.setItem('item',JSON.stringify(resultCountObj))
+      document.querySelector('.resultClass').innerHTML=result
+      document.querySelector('.pickShow').innerHTML=`you <img class="game-icon" src='${yourPick}.png'> computer <img class="game-icon" src='${computerPick}.png'>`
+    }
+    function clearScore(){
+      localStorage.removeItem('item')
+      resultCountObj.win=0
+      resultCountObj.lose=0
+      resultCountObj.tie=0
+       document.querySelector('.countClass').innerHTML=`win=${resultCountObj.win}, lose=${resultCountObj.lose}, tie=${resultCountObj.tie
+      }`
+    }
+  
+
+  </script>
+  
+</body>
+</html>
